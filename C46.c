@@ -33,7 +33,7 @@ void menu() {
     printf("2.Them mot gia tri vao vi tri dau tien cua Array.\n");
     printf("3. Them mot gia tri vao vi tri bat ki trong Array.\n");
     printf("4. Other: END\n");
-    printf("Nhap lua chon cua ban: ");
+    printf("Selection: ");
     scanf("%c", &choose);
     switch(choose) {
         case '1':
