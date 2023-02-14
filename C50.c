@@ -38,9 +38,8 @@ void xuatmang(int x[], int size) {
 int timMax(int y[],int n) {
     int max = y[0];
     for(int i = 0; i < n; i++) {
-        if(y[i] > max) {
+        if(y[i] > max);
             max = y[i];
-        }
     }
     return max;
 }
@@ -51,12 +50,10 @@ void inMangConKhongGiam(int x[], int n) {
         b[i] = 1;
     }
 
-    for(int i = n - 1;  i > 0 ; i--) {
-        for(int j = i - 1; j >= 0; j--) {
-            if(x[j] < x[i]) {
-                b[j] = timmax(b[j], b[i] + 1);
-            }
-        }
+    for(int i = n - 1;  i > 0 ; i++) {
+        if(x[i] >= x[i - 1]) {
+            b[i - 1] = b[i] + 1;
+        } 
     }
 
     int soluongMax = timMax(b, n);
@@ -66,11 +63,10 @@ void inMangConKhongGiam(int x[], int n) {
             for(int j = i; j < soluongMax + i; j++) {
                 printf("%d ", x[j]);
             } 
-            break;
+        break;
         }
     }
-}
-
+}   
 int main() {
     n = nhapsize();
     nhapmang(a, n);
